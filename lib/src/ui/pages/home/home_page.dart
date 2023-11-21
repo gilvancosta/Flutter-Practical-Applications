@@ -15,14 +15,14 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final scaffoldKey = GlobalKey<ScaffoldState>();
+    //  final scaffoldKey = GlobalKey<ScaffoldState>();
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home Page'),
       ),
       // ignore: prefer_const_constructors
-      drawer: NavigationDrawerWidget(scaffoldKey: scaffoldKey),
+      drawer: NavigationDrawerWidget(),
       body: const ListViewWidget(),
     );
   }

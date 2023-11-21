@@ -5,9 +5,9 @@ import '../../../router/app_router.dart';
 import 'widgets/menu_items.dart';
 
 class NavigationDrawerWidget extends ConsumerStatefulWidget {
-  final GlobalKey<ScaffoldState> scaffoldKey;
+  //final GlobalKey<ScaffoldState> scaffoldKey;
 
-  const NavigationDrawerWidget({super.key, required this.scaffoldKey});
+  const NavigationDrawerWidget({super.key});
 
   @override
   NavigationDrawerWidgetState createState() => NavigationDrawerWidgetState();
@@ -31,7 +31,8 @@ class NavigationDrawerWidgetState
           final menuItem = appMenuItems[value];
           appRouter.push(menuItem.link);
           // context.push(menuItem.link);
-          widget.scaffoldKey.currentState?.closeDrawer();
+          // widget.scaffoldKey.currentState?.closeDrawer();
+          Navigator.pop(context);
         },
         children: [
           UserAccountsDrawerHeader(

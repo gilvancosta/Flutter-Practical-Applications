@@ -4,6 +4,8 @@ import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../ui/pages/home/home_page.dart';
 
+import '../../ui/pages/riverpod/counter/counter_page.dart';
+import '../../ui/pages/riverpod/theme_changer/theme_changer_page.dart';
 import '../../ui/pages/seccion10/animated/animated_screen.dart';
 import '../../ui/pages/seccion10/app_tutorial/app_tutorial_screen.dart';
 import '../../ui/pages/seccion10/buttons/buttons_screen.dart';
@@ -66,6 +68,18 @@ GoRouter appRouter(AppRouterRef ref) {
         name: InfiniteScrollScreen.name,
         builder: (context, state) => const InfiniteScrollScreen(),
       ),
+      GoRoute(
+        path: '/counter-river',
+        name: CounterPage.titlePage,
+        builder: (context, state) => const CounterPage(),
+      ),
+      GoRoute(
+        path: '/theme-changer-river',
+        name: ThemeChangerPage.titlePage,
+        builder: (context, state) => const ThemeChangerPage(),
+      ),
+
+
     ],
   );
 }
